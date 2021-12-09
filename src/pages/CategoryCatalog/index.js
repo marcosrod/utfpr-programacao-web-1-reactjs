@@ -2,10 +2,10 @@ import "./styles.css"
 import { useNavigate } from "react-router";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setCategory } from "../../redux";
+import CreateButton from "../../components/CreateButton";
 
 const CategoryCatalog = () => {
     const navigate = useNavigate();
@@ -57,13 +57,7 @@ const CategoryCatalog = () => {
        <Header/>
     </div>
 
-    <div className="btn-float-create" onClick={() => navigate('/category/create')}>
-        <div className="btn-float-div">
-        <Link to={"/category/create"} className="float">
-          +
-        </Link>
-        </div>
-      </div>
+    <CreateButton url={'/category/create'}/>
 
     <div className="navbar-fixed-bottom">
         <Footer/>

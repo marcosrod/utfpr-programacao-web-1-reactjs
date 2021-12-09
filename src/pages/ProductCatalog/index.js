@@ -2,8 +2,8 @@ import "./styles.css"
 import { useNavigate } from "react-router";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import CreateButton from "../../components/CreateButton";
 
 const ProductCatalog = () => {
     const navigate = useNavigate();
@@ -52,13 +52,7 @@ const ProductCatalog = () => {
             <div className="navbar-fixed-top">
         <Header/>
     </div>
-    <div className="btn-float-create" onClick={() => navigate('/product/create')}>
-      <div className="btn-float-div">
-        <Link to={"/product/create"} className="float">
-          +
-        </Link>
-      </div>
-    </div>
+    <CreateButton url={'/product/create'}/>
     <div className="navbar-fixed-bottom">
         <Footer/>
     </div>
